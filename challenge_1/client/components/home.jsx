@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import SearchForm from './searchForm.jsx';
-
+import SearchResults from './searchResults.jsx';
 
 class Home extends React.Component {
   constructor(props) {
@@ -22,7 +22,6 @@ class Home extends React.Component {
     axios.get(`http://localhost:3000/events?q=${searchValue}`)
       .then((res) => {
         this.setState({searchResults: res.data});
-        console.log('res.data: ', res.data);
       })
       .catch((err) => {
         console.log(`Error calling GET for full-text search: ${err}`);
@@ -34,6 +33,7 @@ class Home extends React.Component {
       <div>
         <h1>Historical Events Finder</h1>
         <SearchForm handleSearch={this.clickSearch}/>
+        <SearchResults results={this.state.searchResults} />
       </div>
     )
   }
