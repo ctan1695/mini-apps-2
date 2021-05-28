@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Home from './components/home.jsx';
 const targetElement = document.getElementById('app');
 
-ReactDOM.render(<h1>hi world</h1>, targetElement);
-
-
-console.log('targetElement: ', targetElement)
+ReactDOM.render(<Home />, targetElement);
