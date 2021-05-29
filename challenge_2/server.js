@@ -23,3 +23,4 @@ app.listen(port, () => {
   console.log(`App listening on http://localhost:${port}`);
 })
 
+//https://api.coindesk.com/v1/bpi/historical/close.json

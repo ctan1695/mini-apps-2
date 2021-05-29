@@ -1,3 +1,4 @@
-public/
+public/bundle.js
+public/index.html
 node_modules
 webpack.config.js
